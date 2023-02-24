@@ -25,7 +25,13 @@ public class VelocityTrail : MonoBehaviour
             _leftSpeed = leftVelocity.magnitude;
         }
 
-        GetComponent<TrailRenderer>().material.color = new Color(_leftSpeed/2, 1.0f - _leftSpeed/2, 0.0f, 1.0f);
-
+        if(_leftSpeed <= 0.5f)
+        {
+            GetComponent<TrailRenderer>().material.color = new Color(_leftSpeed*2.0f, 1.0f, 0.0f, 1.0f);
+        }
+        else
+        {
+            GetComponent<TrailRenderer>().material.color = new Color(1.0f, 2.0f - _leftSpeed*2.0f, 0.0f, 1.0f);
+        }
     }
 }
