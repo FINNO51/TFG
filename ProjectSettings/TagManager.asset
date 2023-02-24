@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Martillo
+  - Cincel
+  - Bloque
   layers:
   - Default
   - TransparentFX
